@@ -29,7 +29,7 @@ class UserController extends Controller
         }
 
         public function show(User $user){
-            return response()->json(['message'=>'','data'=>$user],200);
+            return response()->json(['message'=>'User Created satisfactoriamente','data'=>$user],200);
         }
 
     //mostrar todos los usuarios

@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+
     ];
 
     /**
@@ -44,7 +45,7 @@ class User extends Authenticatable
 
     //1-n on petititions
     public function petition(){
-        return $this->belongsTo(Petition::class);
+        return $this->hasMany(Petition::class);
     }
 
 

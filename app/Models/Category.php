@@ -9,6 +9,11 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name'
+    ];
+
+
     //1-n con peticiones
     public function petition(){
         return $this->hasMany(Peticione::class);

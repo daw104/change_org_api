@@ -15,13 +15,14 @@ class Petition extends Model
         'title',
         'description',
         'destinatario',
-        'estado'
+        'estado',
+        'image'
     ] ;
 
 
     //1-n on users
     public function user(){
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
     //relacion con categories

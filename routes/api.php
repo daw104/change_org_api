@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PetitionController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,4 +28,17 @@ Route::controller(UserController::class)->group(function(){
     Route::get('user', 'show_all');
 });
 
+
+Route::controller(CategoryController::class)->group(function(){
+    Route::post('store', 'store');
+    Route::get('category/{category}', 'show');
+    Route::get('category', 'show_all');
+});
+
+
+Route::controller(PetitionController::class)->group(function(){
+    Route::post('storePetition', 'store');
+    Route::get('petition/{petition}', 'show');
+    Route::get('petition', 'show_all');
+});
 

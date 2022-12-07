@@ -10,13 +10,14 @@ class Petition extends Model
     use HasFactory;
 
     protected $fillable = [
-        'categorie_id',
-        'user_id',
         'title',
         'description',
         'destinatario',
+        'firmantes',
         'estado',
-        'image'
+        'image',
+        'categorie_id',
+        'user_id'
     ] ;
 
 

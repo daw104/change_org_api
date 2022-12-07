@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('destinatario');
+            $table->integer('firmantes');
             $table->enum('estado', ['aceptada', 'pendiente']);
             $table->string('image', 255, );
             $table->foreign('categorie_id')->references('id')->on('categories');
